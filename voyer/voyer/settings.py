@@ -43,7 +43,7 @@ ROOT_URLCONF = 'voyer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/"website/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -61,13 +61,13 @@ WSGI_APPLICATION = 'voyer.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql+pyodbc',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sphub',
-        'HOST': 'DESKTOP-F9AM26F',
-        'PORT': '1433',
+        'HOST': 'locolhost',
+        'PORT': '3306',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
             'trusted_connection': 'yes',}
@@ -77,6 +77,8 @@ DATABASES = {
         
     }
 }
+"""
+
 
 
 # Password validation
